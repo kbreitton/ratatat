@@ -1,9 +1,8 @@
 #include "ofApp.h"
-bool pressed = false;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
- 
+
 }
 
 //--------------------------------------------------------------
@@ -13,23 +12,16 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofDrawBitmapStringHighlight("Everything works!", 20, 20);
-    
-    if (pressed) {
-        ofDrawBitmapStringHighlight("AHHH!", 40, 40);
-    }
+
+  ofBackground(30,10,30);
+  ofSetColor(ofColor::blue);
+  ofFill();
+  ofCircle( mouseX, mouseY, 30);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    switch (key) {
-        case 'l' :
-            pressed = true;
-            break;
-        case 'a' :
-            pressed = false;
-            break;
-    }
+    
 }
 
 //--------------------------------------------------------------
