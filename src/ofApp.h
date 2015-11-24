@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "GraphicsHandler.h"
+#include "SoundHandler.h"
 
 class ofApp : public ofBaseApp{
 
