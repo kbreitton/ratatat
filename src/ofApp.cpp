@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -13,14 +13,11 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-  ofBackground(30,10,30);
-  ofSetColor(ofColor::green);
-  ofFill();
-  ofCircle( mouseX, mouseY, 30);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    gHandler.addGraphic(key);
     
 }
 

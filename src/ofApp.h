@@ -5,6 +5,8 @@
 #include "SoundHandler.h"
 
 class ofApp : public ofBaseApp{
+    
+    GraphicsHandler gHandler;
 
 	public:
 		void setup();
