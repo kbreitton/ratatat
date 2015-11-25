@@ -12,10 +12,10 @@
 class BaseGraphic {
     
     public :
-        BaseGraphic();
+        //BasGraphic();
         bool isDone = false;
-        virtual void setup();
-        virtual void draw();
-        virtual void update();
+        //virtual void setup();
+        virtual void draw() {};
+        virtual void update() {};
     
 };

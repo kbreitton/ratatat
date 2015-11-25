@@ -4,26 +4,29 @@
 #include "BaseGraphic.h"
 #include "CircleGraphic_L.h"
 #include <list>
+#include <memory>
 
 class GraphicsHandler {
     
-    std::list<BaseGraphic> graphics;
-    typedef std::<unique_ptr> GraphicsPtr;
+    typedef std::unique_ptr<BaseGraphic>  GraphicsPtr;
+    std::list<GraphicsPtr> graphics;
 
 public:
-    GraphicsHandler();
+    //GraphicsHandler();
     void update() {
-
+       
         for (auto it = graphics.begin(); it != graphics.end(); it++) {
-            (*it).update();
-            if ((*it).isDone) {
-                graphics.erase(it);
+            (*it)->update();
+            if ((*it)->isDone) {
+                  it = graphics.erase(it);
             }
+
         }
     }
+
     void draw(){
         for (auto it = graphics.begin(); it != graphics.end(); it++) {
-            (*it).draw();
+            (*it)->draw();
         }
 
     }
@@ -31,7 +34,7 @@ public:
     void addGraphic(int key) {
         switch (key) {
             case 'l' :
-                graphics.push_back(new CircleGraphic_L());
+                graphics.push_back(GraphicsPtr(new CircleGraphic_L()));
                 break;
         }
     }
