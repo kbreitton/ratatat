@@ -1,10 +1,11 @@
 #pragma once
 
+#include <list>
+#include <memory>
 #include "ofMain.h"
 #include "BaseGraphic.h"
 #include "CircleGraphic_L.h"
-#include <list>
-#include <memory>
+
 
 class GraphicsHandler {
     

@@ -22,7 +22,7 @@ class CircleGraphic_L : public BaseGraphic {
 public:
     void update() {
         radius_counter = radius_counter + 0.033f;
-        if (radius_counter > 2.0f) {
+        if (radius_counter > 5.0f) {
             isDone = true;
         }
     }

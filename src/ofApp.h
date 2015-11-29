@@ -7,6 +7,7 @@
 class ofApp : public ofBaseApp{
     
     GraphicsHandler gHandler;
+    SoundHandler sHandler;
 
 	public:
 		void setup();

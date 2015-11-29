@@ -4,8 +4,9 @@
 void ofApp::setup(){
    ofSetCircleResolution(50);
    ofBackground(255,255,255);
-   ofSetWindowTitle("graphics example");
+   ofSetWindowTitle("Ratatat");
    ofSetFrameRate(60); // if vertical sync is off, we can go a bit fast... this caps the framerate at 60fps. 
+   sHandler.setup();
 }
 
 //--------------------------------------------------------------
@@ -21,6 +22,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     gHandler.addGraphic(key);
+    sHandler.play(key);
 }
 
 //--------------------------------------------------------------
