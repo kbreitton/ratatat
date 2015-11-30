@@ -5,6 +5,9 @@
 #include "CircleGraphic_L.h"
 #include "CircleGraphic_K.h"
 #include "CircleGraphic_J.h"
+
+#include "TriangleGraphic_H.h"
+
 #include <list>
 #include <memory>
 
@@ -40,6 +43,13 @@ public:
                 break;
             case 'j' :
                 graphics.push_back(GraphicsPtr(new CircleGraphic_J()));
+                break;
+            case 'h' :
+                graphics.push_back(GraphicsPtr(new TriangleGraphic_H()));
+                break;
+            case 'g' :
+                ofBackground(rand() % 255,rand() % 255,rand() % 255);
+                // Change to make color changes softer/less extreme
                 break;
         }
     }

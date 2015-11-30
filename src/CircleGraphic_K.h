@@ -24,9 +24,5 @@ public:
         float radius = 50 + 10 * sin(radius_counter);
         ofFill();		// draw "filled shapes"
         ofDrawCircle(x,y,radius);
-        //string s = "x = " + std::to_string(x);
-        //ofDrawBitmapString(s,30,30);
-        //string q = "y = " + std::to_string(y);
-        //ofDrawBitmapString(q, 30,60);
     }
 };
