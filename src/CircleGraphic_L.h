@@ -25,6 +25,4 @@ public:
         ofFill();		// draw "filled shapes"
         ofDrawCircle(100,400,radius);
     }
-    
-    
 };
