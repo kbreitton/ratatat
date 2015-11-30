@@ -4,14 +4,8 @@
 #include "BaseGraphic.h"
 
 class CircleGraphic_L : public BaseGraphic {
-    //int x;
-    //int y;
-    //int radius;
-    //float x_counter;
-    //float y_counter;
     float radius_counter = 0;
-    //float duration;
-    //float duration_counter = 0;
+    
 public:
     void update() {
         radius_counter = radius_counter + 0.033f;
@@ -20,9 +14,10 @@ public:
         }
     }
     void draw() {
-        ofSetColor(255,130,0);
+        // color changes a bit, not by much
+        ofSetColor(150 + 50 * radius_counter ,50,0);
         float radius = 50 + 10 * sin(radius_counter);
-        ofFill();		// draw "filled shapes"
+        ofFill();		
         ofDrawCircle(100,400,radius);
     }
 };

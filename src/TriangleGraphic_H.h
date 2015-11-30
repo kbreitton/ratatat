@@ -11,17 +11,13 @@
 #include "BaseGraphic.h"
 
 class TriangleGraphic_H : public BaseGraphic {
-    int x = 250 + rand() % 500;
+    int x = 250;
     int y = 300;
     int color = rand() % 255;
-    //float x_counter;
-    //float y_counter;
     float radius_counter = 0;
-    //float duration;
-    //float duration_counter = 0;
 public:
     void update() {
-        radius_counter = radius_counter + 0.033f;
+        radius_counter = radius_counter + 0.066f;
         if (radius_counter > 3.0f) {
             isDone = true;
         }

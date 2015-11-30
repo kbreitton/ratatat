@@ -5,13 +5,8 @@
 
 class CircleGraphic_K : public BaseGraphic {
     int x = rand() % 800 + 100;
-    int y = rand() % 800 + 100;
-    //int radius;
-    //float x_counter;
-    //float y_counter;
+    int y = rand() % 800;
     float radius_counter = 0;
-    //float duration;
-    //float duration_counter = 0;
 public:
     void update() {
         radius_counter = radius_counter + 0.033f;

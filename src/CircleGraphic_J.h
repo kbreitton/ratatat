@@ -9,24 +9,20 @@
 class CircleGraphic_J : public BaseGraphic {
     int x = 0;
     int y = 500;
-    //int radius;
-    //float x_counter;
-    //float y_counter;
     float radius_counter = 0;
     float radius = 150;
-    //float duration;
-    //float duration_counter = 0;
+
 public:
     void update() {
         if (y <= 0){
             isDone = true;
         }
         if (x<= 500){
-            x += 10;
+            x += 20;
             radius = 100;
         }else {
-            y -= 10;
-            radius = radius - 1;
+            y -= 20;
+            radius = radius - 2;
         }
     }
     void draw() {
