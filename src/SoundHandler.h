@@ -5,17 +5,23 @@
 
 class SoundHandler {
   
-  std::map<int,ofSoundPlayer> sounds;
-  ofSoundPlayer L;
+    std::map<int,ofSoundPlayer> sounds;
+    ofSoundPlayer L;
+    ofSoundPlayer J;
+    ofSoundPlayer S;
 
 public:
-  void setup() {
-    L.load("Ambient_L.mp3");
-    sounds['l'] =  L;
-  }
-  void update() {
-  }
-  void play(int key) {
-    sounds[key].play();
-  }
+    void setup() {
+        L.load("Ambient_L.mp3");
+        sounds['l'] =  L;
+        //J.load("clip2.mp3");
+        //sounds['j'] = J;
+        S.load("Clip3.mp3");
+        sounds['s'] = S;
+    }
+    void update() {
+    }
+    void play(int key) {
+        sounds[key].play();
+    }
 };

@@ -11,6 +11,7 @@
 // g is for background change so it does not have a class
 #include "StripeGraphic_F.h"
 #include "EllipseGraphic_D.h"
+#include "CirclesGraphic_S.h"
 
 #include <list>
 #include <memory>
@@ -60,6 +61,9 @@ public:
                 break;
             case 'd' :
                 graphics.push_back(GraphicsPtr(new EllipseGraphic_D()));
+                break;
+            case 's' :
+                graphics.push_back(GraphicsPtr(new CirclesGraphic_S()));
                 break;
         }
     }
