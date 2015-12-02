@@ -18,10 +18,10 @@ public:
             isDone = true;
         }
         if (x<= 500){
-            x += 20;
+            x += 10;
             radius = 100;
         }else {
-            y -= 20;
+            y -= 15;
             radius = radius - 2;
         }
     }

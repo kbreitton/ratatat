@@ -8,10 +8,14 @@
 #include "CircleGraphic_K.h"
 #include "CircleGraphic_J.h"
 #include "TriangleGraphic_H.h"
-// g is for background change so it does not have a class
+#include "CircleGraphic_G.h"
 #include "StripeGraphic_F.h"
 #include "EllipseGraphic_D.h"
 #include "CirclesGraphic_S.h"
+#include "CirclesGraphic_A.h"
+
+
+// Space bar is for background change
 
 #include <list>
 #include <memory>
@@ -53,6 +57,9 @@ public:
                 graphics.push_back(GraphicsPtr(new TriangleGraphic_H()));
                 break;
             case 'g' :
+                graphics.push_back(GraphicsPtr(new CircleGraphic_G()));
+                break;
+            case ' ' :
                 ofBackground(200 + rand() % 55,200 + rand() % 55,200 + rand() % 55);
                 // Change to make color changes softer/less extreme
                 break;
@@ -64,6 +71,9 @@ public:
                 break;
             case 's' :
                 graphics.push_back(GraphicsPtr(new CirclesGraphic_S()));
+                break;
+            case 'a' :
+                graphics.push_back(GraphicsPtr(new CirclesGraphic_A()));
                 break;
         }
     }

@@ -9,13 +9,14 @@ class SoundHandler {
     ofSoundPlayer L;
     ofSoundPlayer J;
     ofSoundPlayer S;
+    
 
 public:
     void setup() {
         L.load("Ambient_L.mp3");
         sounds['l'] =  L;
-        //J.load("clip2.mp3");
-        //sounds['j'] = J;
+        J.load("Clip1.mp3");
+        sounds['j'] = J;
         S.load("Clip3.mp3");
         sounds['s'] = S;
     }
