@@ -12,6 +12,7 @@ class SoundHandler {
     ofSoundPlayer M;
     ofSoundPlayer G;
     ofSoundPlayer K;
+    ofSoundPlayer H;
     
 
 public:
@@ -28,6 +29,8 @@ public:
         sounds['g'] = G;
         K.load("Clip9.mp3");
         sounds['k'] = K;
+        H.load("LilJon.mp3");
+        sounds['h'] = H;
         
     }
     void update() {
