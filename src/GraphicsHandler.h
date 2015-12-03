@@ -13,6 +13,7 @@
 #include "EllipseGraphic_D.h"
 #include "CirclesGraphic_S.h"
 #include "CirclesGraphic_A.h"
+#include "LineGraphic_M.h"
 
 
 // Space bar is for background change
@@ -74,6 +75,9 @@ public:
                 break;
             case 'a' :
                 graphics.push_back(GraphicsPtr(new CirclesGraphic_A()));
+                break;
+            case 'm' :
+                graphics.push_back(GraphicsPtr(new LineGraphic_M()));
                 break;
         }
     }
