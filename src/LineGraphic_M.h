@@ -54,7 +54,7 @@ public:
             dx6 =   cos(PI_over_2 - counter + PI_over_6) * 200;
             dy6 = - sin(PI_over_2 - counter + PI_over_6) * 200;
         }
-        counter += 0.1;
+        counter += 0.09;
     }
     
     void draw() {

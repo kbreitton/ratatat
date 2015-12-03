@@ -9,13 +9,15 @@ class EllipseGraphic_D : public BaseGraphic {
     float y = 400;
     float w = 0;
     float h = 400;
+    float acc = 0;
 public:
     void update() {
         if (h <= 0){
             isDone = true;
         }
         w += 15;
-        h -= 10;
+        h -= acc;
+        acc += .5;
     }
     void draw() {
         ofSetColor(255,150,0);

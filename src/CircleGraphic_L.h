@@ -18,6 +18,6 @@ public:
         ofSetColor(150 + 50 * radius_counter ,50,0);
         float radius = 50 + 10 * sin(radius_counter);
         ofFill();		
-        ofDrawCircle(100,400,radius);
+        ofDrawCircle(radius_counter * 100,400 - radius_counter * 50,radius);
     }
 };

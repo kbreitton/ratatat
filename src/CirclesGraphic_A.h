@@ -6,14 +6,14 @@
 class CirclesGraphic_A : public BaseGraphic {
     int x = 500;
     int y = 400;
-    int w = 300;
+    int w = 500;
     int radius = 20;
 public:
     void update() {
         if (w <= 0){
             isDone = true;
         } else {
-            w -= 5;
+            w -= 10;
         }
     }
     void draw() {
