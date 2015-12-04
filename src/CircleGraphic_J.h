@@ -18,7 +18,7 @@ public:
             isDone = true;
         }
         if (x<= 500){
-            x += 20;
+            x += 15;
             radius = 100;
         }else {
             y -= 25;

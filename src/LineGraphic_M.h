@@ -24,12 +24,11 @@ class LineGraphic_M : public BaseGraphic {
     float dy5 = 0;
     float dx6 = 0;
     float dy6 = 0;
-    float counter = PI * .5;
     float radius = 5;
     float PI_over_2 = PI / 2;
     float PI_over_3 = PI / 3;
     float PI_over_6 = PI / 6;
-    
+    float counter = PI_over_2;
     
 public:
     void update() {
@@ -42,18 +41,16 @@ public:
         dx2 =   cos(PI_over_2 - counter) * 200;
         dy2 = - sin(PI_over_2 - counter) * 200;
         
-        if (counter >= PI_over_6*.5 + PI_over_2){
-            dy3  =   cos(counter - PI_over_6 * .5) * 200;
-            dx3  = - sin(counter - PI_over_6 * .5) * 200;
-            dx4 =   cos(PI_over_2 - counter + PI_over_6 * .5) * 200;
-            dy4 = - sin(PI_over_2 - counter + PI_over_6 * .5) * 200;
-        }
-        if (counter >= PI_over_6 + PI_over_2){
-            dy5  =   cos(counter - PI_over_6) * 200;
-            dx5  = - sin(counter - PI_over_6) * 200;
-            dx6 =   cos(PI_over_2 - counter + PI_over_6) * 200;
-            dy6 = - sin(PI_over_2 - counter + PI_over_6) * 200;
-        }
+        dy3  =   cos(counter - PI_over_6 * .5) * 200;
+        dx3  = - sin(counter - PI_over_6 * .5) * 200;
+        dx4 =   cos(PI_over_2 - counter + PI_over_6 * .5) * 200;
+        dy4 = - sin(PI_over_2 - counter + PI_over_6 * .5) * 200;
+        
+        dy5  =   cos(counter - PI_over_6) * 200;
+        dx5  = - sin(counter - PI_over_6) * 200;
+        dx6 =   cos(PI_over_2 - counter + PI_over_6) * 200;
+        dy6 = - sin(PI_over_2 - counter + PI_over_6) * 200;
+        
         counter += 0.09;
     }
     
@@ -66,13 +63,10 @@ public:
             ofDrawLine(x1 + dx, y1 + dy, x2 + dx, y2 - dy);
             ofDrawCircle(x1 + dx,y1 + dy,radius);
             ofDrawCircle(x2 + dx,y2 - dy,radius);
-        }
-        if ((counter <= (PI_over_2 * 3))) {
             ofDrawLine(x1 + dx2, y1 + dy2, x2 + dx2, y2 - dy2);
             ofDrawCircle(x1 + dx2,y1 + dy2,radius);
             ofDrawCircle(x2 + dx2,y2 - dy2,radius);
         }
-        
         if ((counter >= PI_over_6 * .5 + PI_over_2 ) &&
                 counter <= (PI_over_2 * 3) + PI_over_6*.5) {
             ofDrawLine(x1 + dx3, y1 + dy3, x2 + dx3, y2 - dy3);

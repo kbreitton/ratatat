@@ -8,13 +8,14 @@
  */
 class CirclesGraphic_S : public BaseGraphic {
     int x = 500;
+
     
-    int r1 = - (rand() % 100 + 50);
-    int r2 = rand() % 200 + 50;
-    int r3 = -(rand() % 50 + 50);
-    int r4 = rand() % 10 + 50;
+    int r1 = (rand() % 200 - 100) * 2;
+    int r2 = (rand() % 200 - 100) * 2;
+    int r3 = (rand() % 200 - 100) * 2;
+    int r4 = (rand() % 200 - 100) * 2;
     
-    float radius = 30;
+    float radius = 20;
     float counter = 0;
     int y = 400;
     
@@ -23,12 +24,12 @@ public:
         if (counter >= 3){
             isDone = true;
         } else {
-            counter += .05f;
+            counter += .1f;
         }
     }
     void draw() {
         
-         ofFill();		// draw "filled shapes"
+         ofFill();
          ofSetColor(0,255,255);
          ofDrawCircle(x + r1 * counter,y + r2 * counter,radius);
          ofSetColor(0,0,255);
