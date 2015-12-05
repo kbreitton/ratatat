@@ -12,7 +12,7 @@ class CircleGraphic_G : public BaseGraphic {
     
 public:
     void update() {
-        if (radius >= 1500) {
+        if (radius >= 1300) {
             isDone = true;
             ofBackground(255 - color * 2,255 - color * .5,255 - color);
         }
