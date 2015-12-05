@@ -33,6 +33,8 @@ public:
         sounds['g'] = G;
         K.load("Clip9.mp3");
         sounds['k'] = K;
+        // Seriously feel free to take this out.
+        // I just need to find a replacement
         H.load("LilJon.mp3");
         sounds['h'] = H;
         _.load("Clip2.mp3");
