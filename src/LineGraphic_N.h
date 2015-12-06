@@ -9,24 +9,24 @@
 
 class LineGraphic_N : public BaseGraphic {
     float counter = 0;
-    ofBoxPrimitive box;
+    float x1 = 100;
+    float y1 = 100;
+    float x2 = 900;
+    float y2 = 100;
+    
 public:
     void update() {
-        if (counter >= 10) {
+        if (x2 <= 100) {
             isDone = true;
         }
-        counter += 0.05f;
+        x2 -= 40;
        
     }
     
     void draw() {
-        box.setSideColor(0,50);
-        box.setPosition(ofGetWidth()*.2, ofGetHeight()*.75, 0);
-        box.setPosition(ofGetWidth()*.2, ofGetHeight()*.75, 0);
-        
-        vector<ofMeshFace> triangles = box.getMesh().getUniqueFaces();
-        
-        box.draw();
+        ofSetColor(0,100,0);
+        ofFill();
+        ofSetLineWidth(10);
+        ofDrawLine(x1,y1,x2,y2);
     }
-    
 };

@@ -15,6 +15,9 @@
 #include "CirclesGraphic_A.h"
 #include "LineGraphic_M.h"
 #include "LineGraphic_N.h"
+#include "RectangleGraphic_B.h"
+#include "CircleGraphic_V.h"
+#include "CirclesGraphic_C.h"
 
 
 // Space bar is for background change
@@ -82,6 +85,15 @@ public:
                 break;
             case 'n' :
                 graphics.push_back(GraphicsPtr(new LineGraphic_N()));
+                break;
+            case 'b' :
+                graphics.push_back(GraphicsPtr(new RectangleGraphic_B()));
+                break;
+            case 'v' :
+                graphics.push_back(GraphicsPtr(new CircleGraphic_V()));
+                break;
+            case 'c' :
+                graphics.push_back(GraphicsPtr(new CirclesGraphic_C()));
                 break;
         }
     }
