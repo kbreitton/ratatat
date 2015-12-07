@@ -18,6 +18,8 @@
 #include "RectangleGraphic_B.h"
 #include "CircleGraphic_V.h"
 #include "CirclesGraphic_C.h"
+#include "CurveGraphic_X.h"
+#include "CurveGraphic_Z.h"
 
 
 // Space bar is for background change
@@ -94,6 +96,12 @@ public:
                 break;
             case 'c' :
                 graphics.push_back(GraphicsPtr(new CirclesGraphic_C()));
+                break;
+            case 'x' :
+                graphics.push_back(GraphicsPtr(new CurveGraphic_X()));
+                break;
+            case 'z' :
+                graphics.push_back(GraphicsPtr(new CurveGraphic_Z()));
                 break;
         }
     }

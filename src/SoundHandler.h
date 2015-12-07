@@ -22,7 +22,7 @@ class SoundHandler {
     ofSoundPlayer V;
     ofSoundPlayer C;
     ofSoundPlayer X;
-    
+    ofSoundPlayer Z;
 
 public:
     void setup() {
@@ -54,12 +54,14 @@ public:
         sounds['b'] = B;
         S.load("Clip15.mp3");
         sounds['s'] = S;
-        V.load("Clip16.mp3");
+        V.load("Clip18.mp3");
         sounds['v'] = V;
         C.load("Clip17.mp3");
         sounds['c'] = C;
-        X.load("Clip18.mp3");
+        X.load("Clip16.mp3");
         sounds['x'] = X;
+        Z.load("Clip19.mp3");
+        sounds['z'] = Z;
 
         
     }

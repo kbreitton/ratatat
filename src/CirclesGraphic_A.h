@@ -19,7 +19,7 @@ public:
     void draw() {
         
         
-        ofSetColor(0,255,255);
+        ofSetColor(0,200,255);
         ofFill();
         
         ofDrawCircle(x - w, y,radius);

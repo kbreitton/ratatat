@@ -2,7 +2,10 @@
 
 #include "ofMain.h"
 #include "BaseGraphic.h"
-
+/*
+ * Moves left to right, starts at a random y coordinate
+ * Green
+ */
 class CircleGraphic_V : public BaseGraphic {
     int x = 800;
     int y = 200;
@@ -14,7 +17,7 @@ public:
         if (radius <= 3){
             isDone = true;
         }
-        radius -= 4;
+        radius -= 3;
     }
     void draw() {
         ofSetColor(255,0,255);
