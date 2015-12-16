@@ -20,6 +20,16 @@
 #include "CirclesGraphic_C.h"
 #include "CurveGraphic_X.h"
 #include "CurveGraphic_Z.h"
+#include "CircleGraphic_Q.h"
+#include "BackgroundGraphic_W.h"
+#include "VertexGraphic_E.h"
+#include "StripeGraphic_R.h"
+#include "CurveGraphic_T.h"
+#include "CircleGraphic_Y.h"
+#include "LineGraphic_U.h"
+#include "LineGraphic_I.h"
+#include "CircleGraphic_O.h"
+#include "RectangleGraphic_P.h"
 
 
 // Space bar is for background change
@@ -102,6 +112,36 @@ public:
                 break;
             case 'z' :
                 graphics.push_back(GraphicsPtr(new CurveGraphic_Z()));
+                break;
+            case 'q' :
+                graphics.push_back(GraphicsPtr(new CircleGraphic_Q()));
+                break;
+            case 'w' :
+                graphics.push_back(GraphicsPtr(new BackgroundGraphic_W()));
+                break;
+            case 'e' :
+                graphics.push_back(GraphicsPtr(new VertexGraphic_E()));
+                break;
+            case 'r' :
+                graphics.push_back(GraphicsPtr(new StripeGraphic_R()));
+                break;
+            case 't' :
+                graphics.push_back(GraphicsPtr(new CurveGraphic_T()));
+                break;
+            case 'y' :
+                graphics.push_back(GraphicsPtr(new CircleGraphic_Y()));
+                break;
+            case 'u' :
+                graphics.push_back(GraphicsPtr(new LineGraphic_U()));
+                break;
+            case 'i':
+                graphics.push_back(GraphicsPtr(new LineGraphic_I()));
+                break;
+            case 'o':
+                graphics.push_back(GraphicsPtr(new CircleGraphic_O()));
+                break;
+            case 'p':
+                graphics.push_back(GraphicsPtr(new RectangleGraphic_P()));
                 break;
         }
     }

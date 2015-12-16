@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <stdexcept>
 #include "ofMain.h"
 
 class SoundHandler {
@@ -23,6 +24,16 @@ class SoundHandler {
     ofSoundPlayer C;
     ofSoundPlayer X;
     ofSoundPlayer Z;
+    ofSoundPlayer Q;
+    ofSoundPlayer W;
+    ofSoundPlayer E;
+    ofSoundPlayer R;
+    ofSoundPlayer T;
+    ofSoundPlayer Y;
+    ofSoundPlayer U;
+    ofSoundPlayer I;
+    ofSoundPlayer O;
+    ofSoundPlayer P;
 
 public:
     void setup() {
@@ -36,9 +47,7 @@ public:
         sounds['g'] = G;
         K.load("Clip9.mp3");
         sounds['k'] = K;
-        // Seriously feel free to take this out.
-        // I just need to find a replacement
-        H.load("LilJon.mp3");
+        H.load("Clip_H.mp3");
         sounds['h'] = H;
         _.load("Clip2.mp3");
         sounds[' '] = _;
@@ -62,12 +71,37 @@ public:
         sounds['x'] = X;
         Z.load("Clip19.mp3");
         sounds['z'] = Z;
+        Q.load("Clip_Q.mp3");
+        sounds['q'] = Q;
+        W.load("Clip_W.mp3");
+        sounds['w'] = W;
+        E.load("Clip_E.aif");
+        sounds['e'] = E;
+        R.load("Clip_R.wav");
+        sounds['r'] = R;
+        T.load("Clip_T.aif");
+        sounds['t'] = T;
+        Y.load("Clip_Y.mp3");
+        sounds['y'] = Y;
+        U.load("Clip_U.aif");
+        sounds['u'] = U;
+        I.load("Clip_I.wav");
+        sounds['i'] = I;
+        O.load("Clip_O.aif");
+        sounds['o'] = O;
+        P.load("Clip_P.aif");
+        sounds['p'] = P;
+
 
         
     }
     void update() {
     }
     void play(int key) {
-        sounds[key].play();
+        try {
+          sounds.at(key).play();
+        }
+        catch (const std::out_of_range& oor) {
+        }
     }
 };
