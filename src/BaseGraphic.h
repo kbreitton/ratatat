@@ -8,7 +8,7 @@ class BaseGraphic {
         //BasGraphic();
         bool isDone = false;
         //virtual void setup();
-        virtual void draw() {};
-        virtual void update() {};
+        virtual void draw() = 0;
+        virtual void update() = 0;
     
 };

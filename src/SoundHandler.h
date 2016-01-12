@@ -1,12 +1,12 @@
 #pragma once
 
-#include <map>
+#include <unordered_map>
 #include <stdexcept>
 #include "ofMain.h"
 
 class SoundHandler {
   
-    std::map<int,ofSoundPlayer> sounds;
+    std::unordered_map<int,ofSoundPlayer> sounds;
     ofSoundPlayer L;
     ofSoundPlayer J;
     ofSoundPlayer S;
@@ -79,7 +79,7 @@ public:
         sounds['e'] = E;
         R.load("Clip_R.wav");
         sounds['r'] = R;
-        T.load("Clip_T.aif");
+        T.load("Clip_T.mp3");
         sounds['t'] = T;
         Y.load("Clip_Y.mp3");
         sounds['y'] = Y;

@@ -5,8 +5,8 @@
 
 class CircleGraphic_Q : public BaseGraphic {
     float radius = 50;
-    int x = rand() % 200 + 150;
-    int y = rand() % 400 + 150;
+    int x = rand() % ofGetViewportWidth() + 150;
+    int y = rand() % ofGetViewportHeight() + 150;
     float counter = 0;
     int color = rand() % 55 + 100;
     ofColor background_color;

@@ -24,7 +24,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-        gHandler.addGraphic(key);
+       gHandler.addGraphic(key);
        sHandler.play(key);
     
 }
